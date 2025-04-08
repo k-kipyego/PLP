@@ -23,5 +23,3 @@ else:
 
 # Display the result in the format: num1 operation num2 = result
 print(f"{num1} {operation} {num2} = {result}")
-
-
