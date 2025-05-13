@@ -6,7 +6,7 @@ def modify_content(content):
     return content.upper()
 
 def main():
-    input_filename = "C:/Users/victor.kipyego/Desktop/Notes/PLP Notes/Python/ex.docx"
+    input_filename = "file_handling.dox"
 
     try:
         # Try to open and read from file_handling.dox
