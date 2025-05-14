@@ -21,22 +21,41 @@
         <p>Discover tips, workouts, and nutritional advice to achieve your health goals.</p>
         
         <section id="hero-slider">
-            <!-- Image slider will go here -->
             <h2>Featured Workouts</h2>
-            <p>Placeholder for an exciting image slider showcasing various fitness activities!</p>
+            <div class="slider-container">
+                <div class="slide fade">
+                    <img src="images/slider_hiit.jpeg" alt="High Intensity Training">
+                    <div class="slide-caption">High Intensity Training</div>
+                </div>
+                <div class="slide fade">
+                    <img src="images/slider_yoga.jpeg" alt="Yoga and Mindfulness">
+                    <div class="slide-caption">Yoga & Mindfulness</div>
+                </div>
+                <div class="slide fade">
+                    <img src="images/slider_mealprep.jpeg" alt="Healthy Meal Prep">
+                    <div class="slide-caption">Healthy Meal Prep</div>
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <div style="text-align:center" class="dots-container">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
         </section>
 
         <section id="quick-links">
             <h2>Quick Links</h2>
             <ul>
-                <li><a href="#">Workout Plans</a></li>
-                <li><a href="#">Nutrition Guides</a></li>
-                <li><a href="#">Community Forum</a></li>
+                <li><a href="workout-plans.html">Workout Plans</a></li>
+                <li><a href="nutrition-guides.html">Nutrition Guides</a></li>
+                <li><a href="community-forum.html">Community Forum</a></li>
             </ul>
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 Your Fitness Journey</p>
+        <p>&copy; 2025 Your Fitness Journey</p>
     </footer>
     <script src="js/script.js"></script>
 </body>

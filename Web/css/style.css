@@ -69,6 +69,24 @@ section h2 {
     text-decoration: underline;
 }
 
+.content-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #ffffff; /* White background for content sections */
+    border: 1px solid #e9ecef; /* Light border */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    text-align: left; /* Align text to the left for content pages */
+}
+
+.content-section h2 {
+    color: #28a745; /* Green for section headers */
+    margin-top: 0;
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
 footer {
     text-align: center;
     padding: 15px;
@@ -122,6 +140,27 @@ form button[type="submit"]:hover {
     background-color: #218838;
 }
 
+/* General button style for Call to Actions */
+.cta-button {
+    display: inline-block;
+    background-color: #28a745; /* Green like submit button */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    text-decoration: none; /* Remove underline from <a> tags styled as buttons */
+    margin-top: 15px; /* Add some space above the button */
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #218838; /* Darker green on hover */
+    color: white; /* Ensure text color remains white on hover */
+    text-decoration: none;
+}
+
 @media (max-width: 768px) {
     main {
         padding: 15px;
@@ -147,4 +186,105 @@ form button[type="submit"]:hover {
     main {
         padding-bottom: 20px;
     }
+}
+
+/* Image Slider Styles */
+#hero-slider {
+    position: relative; /* Needed for absolute positioning of nav buttons */
+    max-width: 800px; /* Or your preferred max width */
+    margin: 20px auto; /* Center the slider */
+    overflow: hidden; /* Hide parts of slides that are outside the container */
+    border-radius: 8px;
+}
+
+.slider-container {
+    position: relative;
+}
+
+.slide {
+    display: none; /* Hide all slides by default */
+    width: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove extra space below image */
+}
+
+.slide-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px; /* Adjust to vertically center */
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0; /* Default for prev, next overrides */
+    user-select: none;
+    background-color: rgba(0,0,0,0.3);
+}
+
+.prev {
+    left: 0; /* Added to position the previous button correctly */
+    /* border-radius: 0 3px 3px 0; /* This is already covered by the rule above */
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Dots - Optional, for navigation */
+.dots-container {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #f1f1f1; /* Match section background or choose another */
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active-dot, .dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
 } 
